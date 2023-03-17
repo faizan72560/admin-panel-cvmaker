@@ -1,0 +1,1 @@
+export const baseurl="https://cvmaker-api-ws06.onrender.com"
