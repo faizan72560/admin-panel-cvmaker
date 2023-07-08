@@ -569,7 +569,7 @@ export default function PhrasesControls() {
 
 
 
-
+    const [selectedData, setSelectedData] = useState([]);
 
 
 
@@ -725,7 +725,8 @@ export default function PhrasesControls() {
 
                                 <Fieldset legend="Existing Phrases">
 
-                                    <DataTable value={allData} responsiveLayout="scroll">
+                                    <DataTable value={allData} responsiveLayout="scroll" selectionMode="multiple" selection={selectedData} onSelectionChange={(e) =>{ setSelectedData(e.value)
+                                    console.log(e.value)}}>
                                         <Column field="categoryName" header="Job Title"></Column>
                                         <Column field="phrase" header="Value"></Column>
                                     </DataTable>
